@@ -1,0 +1,253 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+}
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background-color: #bf1722;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+header {
+  min-width: 1000px;
+  position: fixed;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+}
+
+.navbar {
+  position: relative;
+  background-color: transparent;
+  backdrop-filter: blur(8px);
+  background-color: rgb(42, 41, 41);
+  box-shadow: inset 0 0 50px rgba(0, 0, 0, 0.25);
+  width: 100%;
+  height: 5em;
+  color: white;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.nav-title {
+  text-decoration: none;
+  display: flex;
+  width: 100px;
+  gap: 1rem;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nav-title a {
+  text-decoration: none;
+  font-size: 35px;
+  color: rgb(255, 108, 11);
+  text-shadow: 1px 1px 3px rgb(48, 38, 37);
+  font-weight: bold;
+}
+
+span {
+  color: rgb(255, 255, 255);
+}
+
+.nav-daftar {
+  text-decoration: none;
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin-left: 2.5rem;
+}
+
+.nav-daftar a {
+  text-decoration: none;
+  font-size: 1.15rem;
+  display: flex;
+  gap: 3rem;
+  list-style: none;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+}
+
+.nav-item {
+  text-decoration: none;
+  font-size: 15px;
+  color: rgb(255, 255, 255);
+  padding: 1px 10px;
+  gap: 3rem;
+  list-style: none;
+  border-radius: 20px;
+  font-weight: 700;
+}
+
+.nav-toggle {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav-daftar {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* .header{
+    padding: 1.3rem;
+   }  */
+
+  .nav-daftar {
+    gap: 1rem;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: -1000px;
+    background-color: #2a292970;
+    padding: 1rem 0;
+    z-index: 90;
+    transition: top 0.5s ease-in-out;
+    overflow: hidden;
+    left: 0;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+    z-index: 99;
+  }
+
+  .nav-daftar.active {
+    top: 11vh;
+  }
+}
+
+/* home */
+/* jumbotron */
+.home-container {
+  display: flex;
+  align-items: center;
+  min-width: 1000px;
+  height: 100vh;
+  margin-top: -8%;
+  text-align: center;
+  background-image: url("../public/images/heros/hero-image_2.jpg");
+  background-position: center;
+  background-color: rgb(10, 10, 10);
+  position: relative;
+  padding-top: 3rem;
+  row-gap: 3rem;
+}
+
+.hero__inner {
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+.hero__title {
+  color: #fff;
+  font-weight: 500;
+  font-size: 36px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  letter-spacing: 1px;
+  line-height: 1.2;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.hero__tagline {
+  color: #fff;
+  margin-top: auto;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.5;
+  text-align: center;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+  letter-spacing: 0.5px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding-block: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+button {
+  box-sizing: border-box;
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 5px;
+  background-color: #ff7300;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-family: Arial, sans-serif;
+}
+/* home */
+
+/* explore */
+#explore {
+  margin-top: 50px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+/* explore */
+
+/* footer */
+.footer {
+  width: 100%;
+  height: 5em;
+  background-color: rgb(42, 41, 41);
+  color: white;
+  margin-right: 0;
+  margin-left: 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-inline: auto;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.footer p {
+  text-align: center;
+  padding-top: 1rem;
+  color: white;
+  text-decoration: none;
+}
+/* footer */
