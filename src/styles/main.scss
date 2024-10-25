@@ -1,4 +1,5 @@
 * {
+  box-sizing: border-box;
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -6,6 +7,7 @@
 
 body,
 html {
+  font-size: 16px;
   margin: 0;
   padding: 0;
   background-color: rgb(42, 41, 41);
@@ -108,56 +110,14 @@ span {
   cursor: pointer;
 }
 
-@media screen and (max-width: 1024px) {
-  .nav-daftar {
-    display: flex;
-    gap: 1rem;
-    list-style: none;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  /* .header{
-    padding: 1.3rem;
-   }  */
-
-  .nav-daftar {
-    gap: 1rem;
-    flex-direction: column;
-    position: absolute;
-    justify-content: center;
-    align-items: center;
-    top: -1000px;
-    background-color: #2a292970;
-    padding: 1rem 0;
-    z-index: 90;
-    transition: top 0.5s ease-in-out;
-    overflow: hidden;
-    left: 0;
-  }
-
-  .nav-toggle {
-    display: inline-block;
-    z-index: 99;
-  }
-
-  .nav-daftar.active {
-    top: 11vh;
-  }
-}
-
 /* home */
 /* jumbotron */
 .home-container {
-  position: absolute;
   align-items: center;
   min-width: 1000px;
-  height: 100vh;
-  margin-top: -8%;
   text-align: center;
   background-position: center;
   position: relative;
-  padding-top: 3rem;
   row-gap: 3rem;
 }
 
@@ -240,14 +200,14 @@ main {
   font-size: 20px;
   font-weight: bold;
   color: rgb(219, 100, 44);
-  margin-top: 40px;
+  margin-top: -10rem;
   font-family: Arial, sans-serif;
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
   font-weight: bold;
 }
 
 .btn-item button {
-  margin-top: 3rem;
+  margin-top: 15rem;
   box-sizing: border-box;
   min-width: 44px;
   min-height: 44px;
@@ -270,7 +230,6 @@ main {
 }
 
 .restoran {
-  margin-top: -5rem;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -299,11 +258,10 @@ main {
 
 .container-list {
   max-width: 1200px;
-  display: flex;
+  margin-top: 25rem;
   align-items: center;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  margin-inline: 8%;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
 }
@@ -319,34 +277,42 @@ main {
   position: relative;
   background-color: rgba(255, 255, 255, 0.7);
   border-radius: 2%;
-  width: 19em;
+  width: 18em;
   height: 25rem;
-  margin: 10px;
+  margin: 1rem;
   box-sizing: border-box;
-}
+  margin-top: -30rem;
 
-.list img {
-  width: 100%;
-  height: auto;
-  margin-top: -13rem;
-  transition: transform 0.3s ease;
-  transform: scale(1);
-  &:hover {
-    transform: scale(1.05);
+  img {
+    width: 100%;
+    height: auto;
+    margin-top: -13rem;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+    &:hover {
+      transform: scale(1.05);
+    }
   }
-}
 
-.list button {
-  position: absolute;
-  box-sizing: border-box;
-  min-width: 44px;
-  min-height: 44px;
-  border-radius: 5px;
-  background-color: #ff7300;
-  color: #fff;
-  border: none;
-  margin-bottom: 20rem;
-  margin-right: 17rem;
+  button {
+    position: absolute;
+    box-sizing: border-box;
+    min-width: 44px;
+    min-height: 44px;
+    border-radius: 5px;
+    background-color: #ff7300;
+    color: #fff;
+    border: none;
+    margin-bottom: 20rem;
+    margin-right: 16rem;
+    margin-top: 1rem;
+
+    i {
+      font-size: 15px;
+      color: #fff;
+      transition: color 0.3s ease;
+    }
+  }
 }
 
 .list-info {
@@ -364,7 +330,12 @@ main {
     font-weight: 500;
     font-size: medium;
     text-align: center;
-    color: rgb(7, 7, 7);
+    border-radius: 5px;
+    background-color: #ff7300;
+    color: #fff;
+    margin-top: -1rem;
+    padding: 0.5rem;
+    text-shadow: 1px 1px 3px rgb(0, 0, 0);
   }
 
   p {
@@ -391,12 +362,53 @@ main {
   margin-inline: auto;
   max-width: 1000px;
   width: 100%;
+
+  .footer-content {
+    max-width: 600px;
+    margin: 0 auto;
+
+    p {
+      margin: 10px 0;
+    }
+  }
 }
 
-.footer p {
-  text-align: center;
-  padding-top: 1rem;
-  color: white;
-  text-decoration: none;
-}
 /* footer */
+
+@media screen and (max-width: 1024px) {
+  .nav-daftar {
+    display: flex;
+    gap: 1rem;
+    list-style: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  /* .header{
+    padding: 1.3rem;
+   }  */
+
+  .nav-daftar {
+    gap: 1rem;
+    flex-direction: column;
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    top: -1000px;
+    background-color: #2a292970;
+    padding: 1rem 0;
+    z-index: 90;
+    transition: top 0.5s ease-in-out;
+    overflow: hidden;
+    left: 0;
+  }
+
+  .nav-toggle {
+    display: inline-block;
+    z-index: 99;
+  }
+
+  .nav-daftar.active {
+    top: 11vh;
+  }
+}
