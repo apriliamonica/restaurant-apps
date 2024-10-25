@@ -110,26 +110,38 @@ span {
   cursor: pointer;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
 /* home */
 /* jumbotron */
 .home-container {
+  position: relative;
+  display: flex;
   align-items: center;
   min-width: 1000px;
   text-align: center;
-  background-position: center;
-  position: relative;
-  row-gap: 3rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 768px;
 }
 
-.hero {
-  img {
-    position: absolute;
-    width: 100%;
-    min-width: 1000px;
-    height: auto;
-    top: 0;
-    left: 0;
-  }
+img {
+  position: absolute;
+  width: 100%;
+  min-width: 1000px;
+  object-fit: cover;
+  object-position: center;
+  height: auto;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 #find {
@@ -147,7 +159,11 @@ span {
 }
 
 .hero__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   text-align: center;
+  justify-content: center;
   width: 100%;
   height: 0;
 }
@@ -159,7 +175,6 @@ span {
   line-height: 1.2;
   text-align: center;
   letter-spacing: 0.5px;
-  z-index: 1;
   text-shadow: 1px 1px 3px rgb(48, 38, 37);
   font-weight: bold;
 }
@@ -176,27 +191,42 @@ span {
   font-weight: bold;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
 /* home */
 
 /* explore */
-#explore {
+.explore-container {
+  display: flex;
+  align-items: center;
+  min-width: 1000px;
   text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 768px;
 }
 
-.explore-title {
+.explore-container .explore-title {
   font-size: 20px;
   font-weight: bold;
   color: rgb(219, 100, 44);
   font-family: Arial, sans-serif;
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
   font-weight: bold;
+}
+
+.container-resto {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
 }
 
 .btn-item button {
@@ -209,7 +239,6 @@ main {
   padding: 10px 16px;
   transition: background-color 0.3s ease;
   font-weight: 700;
-  margin-bottom: 1rem;
   font-size: 16px;
   font-family: Arial, sans-serif;
 }
@@ -223,62 +252,21 @@ main {
 
 .restoran {
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  min-height: 100vh;
-
-  h2 {
-    font-size: 50px;
-    font-weight: bold;
-    text-align: center;
-    color: white;
-    font-family: sans-serif;
-  }
-
-  p {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: white;
-    line-height: 1.8;
-    font-family: sans-serif;
-    text-align: center;
-  }
-}
-
-.container-list {
-  max-width: 1200px;
-  margin-top: 25rem;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 2rem;
 }
 
 .list {
-  position: relative;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
   justify-content: center;
   align-items: center;
-  color: rgba(228, 228, 228, 0.7);
-  overflow: hidden;
-  position: relative;
-  background-color: rgba(255, 255, 255, 0.7);
-  border-radius: 2%;
-  width: 18em;
-  height: 25rem;
-  margin: 1rem;
-  box-sizing: border-box;
-  margin-top: -30rem;
 
-  img {
+  .img {
     width: 100%;
-    height: auto;
-    margin-top: -13rem;
+    height: 4rem;
     transition: transform 0.3s ease;
     transform: scale(1);
     &:hover {
@@ -287,7 +275,6 @@ main {
   }
 
   button {
-    position: absolute;
     box-sizing: border-box;
     min-width: 44px;
     min-height: 44px;
@@ -295,9 +282,6 @@ main {
     background-color: #ff7300;
     color: #fff;
     border: none;
-    margin-bottom: 20rem;
-    margin-right: 16rem;
-    margin-top: 1rem;
 
     i {
       font-size: 15px;
@@ -309,14 +293,12 @@ main {
 
 .list-info {
   width: 100%;
-  height: 35vh;
-  margin-top: 11rem;
-  position: absolute;
   background-color: rgb(255, 255, 255);
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-direction: column;
+  gap: 1rem;
 
   h2 {
     font-weight: 500;
@@ -325,8 +307,6 @@ main {
     border-radius: 5px;
     background-color: #ff7300;
     color: #fff;
-    margin-top: -1rem;
-    padding: 0.5rem;
     text-shadow: 1px 1px 3px rgb(0, 0, 0);
   }
 
@@ -346,14 +326,10 @@ main {
   height: 5em;
   background-color: rgb(0, 0, 0);
   color: white;
-  margin-right: 0;
-  margin-left: 0;
   align-items: center;
   display: flex;
   justify-content: center;
-  margin-inline: auto;
   max-width: 1000px;
-  width: 100%;
 
   .footer-content {
     max-width: 600px;

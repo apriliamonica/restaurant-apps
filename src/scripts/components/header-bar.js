@@ -1,39 +1,25 @@
-// class HeaderBar extends HTMLElement {
-//   _shadowRoot = null;
-//   _style = null;
+class HeaderBar extends HTMLElement {
+  constructor() {
+    super();
+  }
+  connectedCallback() {
+    this.innerHTML = `
+         <div class="navbar">
+        <div class="nav-title">
+          <a href="#home">Muk<span>Bang</span></a>
+        </div>
+        <nav>
+          <ul class="nav-daftar">
+            <li><a href="#home" class="nav-item">Home</a></li>
+            <li><a href="#about" class="nav-item">Favorite</a></li>
+            <li>
+              <a href="https://www.instagram.com/" class="nav-item">About Us</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    `;
+  }
+}
 
-//   constructor() {
-//     super();
-//     this._shadowRoot = this.attachShadow({ mode: "open" });
-//     this._style = document.createElement("style");
-//   }
-
-//   _updateStyle() {
-//     this._style.textContent = `
-//       :host {
-//         text-align: center;
-//         width: 100%;
-//         background-color: #333;
-//         color: #fff;
-//         padding: 10px;
-//       }
-//         h1 {
-//           margin: 0;
-//         }
-//     `;
-//   }
-
-//   connectedCallback() {
-//     this._shadowRoot.innerHTML = "";
-//     this._updateStyle();
-
-//     this._shadowRoot.appendChild(this._style);
-//     this._shadowRoot.innerHTML += `
-//     <div>
-//       <h1>Mukbang</h1>
-//     </div>
-//     `;
-//   }
-// }
-
-// customElements.define("header-bar", HeaderBar);
+customElements.define("header-bar", HeaderBar);
