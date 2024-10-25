@@ -123,16 +123,16 @@ span {
 
 .hero {
   img {
+    position: absolute;
     width: 100%;
     min-width: 1000px;
     height: auto;
+    top: 0;
+    left: 0;
   }
 }
 
 #find {
-  position: absolute;
-  top: 50%;
-  left: 50%;
   box-sizing: border-box;
   min-width: 44px;
   min-height: 44px;
@@ -148,7 +148,6 @@ span {
 
 .hero__inner {
   text-align: center;
-  margin-top: -30rem;
   width: 100%;
   height: 0;
 }
@@ -167,7 +166,6 @@ span {
 
 .hero__tagline {
   color: #fff;
-  margin-top: auto;
   font-size: 18px;
   font-weight: 300;
   line-height: 1.5;
@@ -181,7 +179,6 @@ span {
 main {
   display: flex;
   flex-direction: column;
-  padding-block: 5rem;
   align-items: center;
   justify-content: center;
 }
@@ -190,24 +187,19 @@ main {
 
 /* explore */
 #explore {
-  margin-top: 100px;
   text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
 }
 
 .explore-title {
   font-size: 20px;
   font-weight: bold;
   color: rgb(219, 100, 44);
-  margin-top: -10rem;
   font-family: Arial, sans-serif;
   text-shadow: 1px 1px 3px rgb(0, 0, 0);
   font-weight: bold;
 }
 
 .btn-item button {
-  margin-top: 15rem;
   box-sizing: border-box;
   min-width: 44px;
   min-height: 44px;
