@@ -8,13 +8,6 @@
       href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
       rel="stylesheet"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
 
   <body>
@@ -28,7 +21,9 @@
           <ul class="nav-daftar">
             <li><a href="#home" class="nav-item">Home</a></li>
             <li><a href="#about" class="nav-item">Favorite</a></li>
-            <li><a href="#stream" class="nav-item">About Us</a></li>
+            <li>
+              <a href="https://www.instagram.com/" class="nav-item">About Us</a>
+            </li>
           </ul>
         </nav>
 
@@ -40,15 +35,10 @@
 
     <main id="maincontent">
       <section class="home-section" id="home">
-        <!-- <div class="home-img">
-            <img
-              src="./images/heros/hero-image_2.jpg"
-              width="450"
-              alt=""
-              class="home-bg"
-            />
-          </div> -->
         <div class="home-container">
+          <div class="hero">
+            <img src="./images/heros/hero-image_2.jpg" alt="Hero Image" />
+          </div>
           <div class="hero__inner">
             <h1 class="hero__title">
               Bangun Karirmu Sebagai Developer Profesional
@@ -57,19 +47,98 @@
               Jadilah tuan rumah di negeri sendiri dengan belajar langsung dari
               para inovator dan developer expert
             </p>
-            <button id="find">Find Now</button>
-          </div>
+            
+          <button id="find">Find Now</button>
         </div>
       </section>
 
-      <section class="explore-section" id="explore">
+      <section div class="explore-section" id="explore">
         <div class="explore-container">
           <div class="explore-title">
-            <h2>Our Favorite</h2>
+            <h2>Explore Our Restaurant</h2>
           </div>
-          <div id="list-resto">
+          <div id="container-resto">
+            <div class="btn-item">
+              <button id="allnotes" class="active">All Resto</button>
+              <button id="favorite-btn" class="favorite-btn">Favorite</button>
+            </div>
             <!-- List restaurants here -->
-            <article class=""></article>
+            <article class="restoran">
+              <div class="container-list">
+                <div class="list">
+                  <img src="./images/heros/hero-image_1.jpg" alt="" />
+                  <button aria-label="add to like">
+                    <i class="bx bx-star"></i>
+                  </button>
+                  <div class="list-info">
+                    <div>
+                      <h2>Manado</h2>
+                    </div>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Tempora doloremque molestias corrupti repudiandae ducimus
+                      nobis necessitatibus quos nemo velit, corporis a totam.
+                      At, dignissimos laboriosam officiis excepturi optio nemo
+                      voluptas.
+                    </p>
+                  </div>
+                </div>
+                <div class="list">
+                  <img src="./images/heros/hero-image_3.jpg" alt="" />
+                  <button aria-label="add to like">
+                    <i class="bx bx-star"></i>
+                  </button>
+                  <div class="list-info">
+                    <div>
+                      <h2>Manado</h2>
+                    </div>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Tempora doloremque molestias corrupti repudiandae ducimus
+                      nobis necessitatibus quos nemo velit, corporis a totam.
+                      At, dignissimos laboriosam officiis excepturi optio nemo
+                      voluptas.
+                    </p>
+                  </div>
+                </div>
+                <div class="list">
+                  <img src="./images/heros/hero-image_4.jpg" alt="" />
+                  <button aria-label="add to like">
+                    <i class="bx bx-star"></i>
+                  </button>
+                  <div class="list-info">
+                    <div>
+                      <h2>Manado</h2>
+                    </div>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Tempora doloremque molestias corrupti repudiandae ducimus
+                      nobis necessitatibus quos nemo velit, corporis a totam.
+                      At, dignissimos laboriosam officiis excepturi optio nemo
+                      voluptas.
+                    </p>
+                  </div>
+                </div>
+                <div class="list">
+                  <img src="./images/heros/hero-image_2.jpg" alt="" />
+                  <button aria-label="add to like">
+                    <i class="bx bx-star"></i>
+                  </button>
+                  <div class="list-info">
+                    <div>
+                      <h2>Manado</h2>
+                    </div>
+                    <p class="description">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                      Tempora doloremque molestias corrupti repudiandae ducimus
+                      nobis necessitatibus quos nemo velit, corporis a totam.
+                      At, dignissimos laboriosam officiis excepturi optio nemo
+                      voluptas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
